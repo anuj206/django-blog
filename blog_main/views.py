@@ -9,12 +9,12 @@ def home(request):
     
     featured_posts = Blog.objects.filter(is_featured=True, status='Published').order_by('updated_at')
     posts = Blog.objects.filter(is_featured=False, status='Published')
-    print(posts)
+    print("Anuj")
     context = {
-
         'featured_posts' : featured_posts,
         'posts' : posts,
     }
+    print("Yadav")
     return render(request, 'home.html', context=context)
 
 
